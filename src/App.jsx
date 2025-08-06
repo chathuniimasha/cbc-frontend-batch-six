@@ -1,26 +1,39 @@
 
+import { BrowserRouter, Route, Routes } from 'react-router-dom'
 import './App.css'
 import ProductCard from './components/productCard'
 import SuperProduct from './components/superProduct'
+import HomePage from './pages/homePage'
+import LoginPage from './pages/loginPage'
+import RegisterPage from './pages/registerPage'
+import AdminPage from './pages/adminPage'
 
 function App() {
   
 
   return (
-    <>
-      <div className='w-full h-screen bg-blue-300'>
-        <div className='w-[600px] h-[600px] bg-black flex flex-col justify-around items-center'>
-        <div className='w-[75px] h-[75px] bg-[red]'></div>
-        <div className='w-[75px] h-[75px] bg-[yellow]'></div>
-        <div className='w-[75px] h-[75px] bg-amber-400'></div>
-        <div className='w-[75px] h-[75px] bg-amber-900'></div>
-        <div className='w-[75px] h-[75px] bg-amber-700'></div>
-        <div className='w-[75px] h-[75px] bg-amber-200'></div>
-        </div>
+    
+    <BrowserRouter>
+      <div className='w-full h-screen flex justify-center item-center'>
+        <div className='w-[calc(100vw-35px)] h-[calc(100vw-15px)] border border-red-700'>
+          <Routes path='/'>
+          <Route path='/' element={<HomePage/>}/>
+          <Route path='/login' element={<LoginPage/>}/>
+          <Route path='/register' element={<RegisterPage/>}/>
+          <Route path='/admin/*'element={<AdminPage/>}/>
 
-      </div>
+
+
+          </Routes>
+
+        </div>
+        
+        </div>
+    </BrowserRouter>
+
       
-    </>
+      
+    
   )
 }
 
