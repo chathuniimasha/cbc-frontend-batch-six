@@ -10,7 +10,7 @@ export default function TestPage(){
     function decrement(){
         setCount(count-1);
     }
-    //setCount(5)  notuse that because again and again refresh not run
+    //setCount(5)  Donot do following.The reason is explained in the session
 
     return(
         <div className='w-full h-screen bg-amber-200 flex justify-center items-center'>
