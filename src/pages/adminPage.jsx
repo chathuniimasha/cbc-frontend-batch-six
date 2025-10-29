@@ -1,4 +1,4 @@
-import { Link, Route, Routes } from "react-router-dom";
+import { Link, Route, Routes, useNavigate } from "react-router-dom";
 import { MdOutlineProductionQuantityLimits } from "react-icons/md";
 import { FaShoppingBag } from "react-icons/fa";
 import { IoPeople } from "react-icons/io5";
@@ -7,10 +7,42 @@ import ProductAdminPage from "./admin/productsAdminPage";
 import AddProductPage from "./admin/addProductAdminPage";
 import UpdateProductPage from "./admin/updateProduct";
 import OrdersPageAdmin from "./admin/orderPageAdmin";
+import { useEffect, useState } from "react";
+import Loader from "../components/loader";
+import toast from "react-hot-toast";
+import axios from "axios";
 
 export default function AdminPage(){
+    const navigate = useNavigate();
+    const [adminValidated,setAdminValidated] = useState(false);
+    useEffect(
+        ()=>{
+            const token = localStorage.getItem("token");
+            if(token == null){
+                toast.error("You are not logged in");
+                navigate("/login");
+            }else{
+                axios.get(import.meta.env.VITE_BACKEND_URL+"/api/users/", {
+                    headers: {
+                        Authorization: `Bearer ${token}`,
+                    },
+                }).then((response) => {
+                    if (response.data.role == "admin") {
+                        setAdminValidated(true);
+                    } else {
+                        toast.error("You are not authorized");
+                        navigate("/login");
+                    }
+                }).catch(() => {
+                    toast.error("You are not authorized");
+                    navigate("/login");
+                });
+            }
+        }
+        ,[]);
     return(
         <div className='w-full h-screen flex'>
+            {adminValidated?<>
             <div className='w-[300px] h-full flex flex-col items-center '>
                 <span className='text-3xl font-bold my-5'>Admin Panel</span>
 
@@ -32,6 +64,7 @@ Orders</Link>
                </Routes>
 
             </div>
+            </>:<Loader/>}
         </div>
     )
 }
