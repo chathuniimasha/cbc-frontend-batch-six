@@ -10,6 +10,7 @@ import { BiStore } from "react-icons/bi";
 export default function Header(){
     const navigate = useNavigate();
     const [isOpen,setIsOpen] = useState(false);
+    const token = localStorage.getItem("token");
     return(
         <header className="h-[100px] bg-accent flex justify-center items-center relative">
             {isOpen &&
@@ -75,9 +76,19 @@ export default function Header(){
             <Link to="/contact-us" className="ml-4 text-white text-xl">
             Contact Us
             </Link>
-            <Link to="/cart" className="absolute right-[80px]">
+            <Link to="/cart" className="absolute right-[250px]">
             <BiCart className="text-white text-3xl ml-4"/>
             </Link>
+            {
+                token != null && <button className="absolute right-[80px] text-white text-xl ml-4" onClick={
+                    ()=>{
+                        localStorage.removeItem("token");
+                        navigate("/login");
+                    }
+                }>
+                    Logout
+                </button>
+            }
             </div>
         </header>
     )
