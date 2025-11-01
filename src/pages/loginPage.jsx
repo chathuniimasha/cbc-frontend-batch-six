@@ -71,7 +71,8 @@ export default function LoginPage(){
             <div className="w-[500px] h-[500px] backdrop-blur-sm shadow-2xl rounded-[30px] relative gap-[20px] text-white flex flex-col items-center justify-center">
                 <h1 className="absolute top-[20px] text-2xl font-bold text-center my-5">Login</h1>
 
-                    <div className="w-[350px] flex flex-col">
+
+                <div className="w-[350px] flex flex-col">
                         <span className="text-lg">Email</span>
                         <input onChange={
                             (e)=>{
