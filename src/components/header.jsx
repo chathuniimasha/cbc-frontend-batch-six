@@ -4,6 +4,10 @@ import { GiHamburgerMenu } from "react-icons/gi";
 import { useState } from "react";
 import { HiHome } from "react-icons/hi";
 import { BiStore } from "react-icons/bi";
+import { HiInformationCircle } from "react-icons/hi";
+import { GoCodeReview } from "react-icons/go";
+import { IoCall } from "react-icons/io5";
+
 
 
 
@@ -20,7 +24,7 @@ export default function Header(){
                             <GiHamburgerMenu className="text-white text-4xl md:hidden " onClick={()=>{
                                 setIsOpen(false);
                             }}/>
-                            <img  className="w-[150px] h-100px] object-cover cursor-pointer" src="/logs.png" alt="logo" onClick={()=>{
+                            <img  className="w-[150px] h-[100px] object-cover cursor-pointer" src="/logs.png" alt="logo" onClick={()=>{
                                 navigate("/");
                             }} />
                         </div>
@@ -49,6 +53,30 @@ export default function Header(){
                             }}>
                                 <BiCart className="text-accent text-2xl mr-2"/>
                                 Cart
+                                </button>
+                                 {/*reviews*/}
+                            <button className="text-accent text-2xl flex flex-row items-center" onClick={()=>{
+                                setIsOpen(false);
+                                navigate("/reviews");
+                            }}>
+                                <GoCodeReview className="text-accent text-2xl mr-2"/>
+                                Reviews
+                                </button>
+                                {/*about*/}
+                            <button className="text-accent text-2xl flex flex-row items-center" onClick={()=>{
+                                setIsOpen(false);
+                                navigate("/about-us");
+                            }}>
+                                <HiInformationCircle className="text-accent text-2xl mr-2"/>
+                                About-us
+                                </button>
+                                {/*contact*/}
+                            <button className="text-accent text-2xl flex flex-row items-center" onClick={()=>{
+                                setIsOpen(false);
+                                navigate("/contact-us");
+                            }}>
+                                <IoCall className="text-accent text-2xl mr-2"/>
+                                Contact-us
                                 </button>
                         </div>
                     </div>
