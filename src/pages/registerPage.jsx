@@ -43,7 +43,7 @@ export default function RegisterPage(){
     
     
     return(
-        <div className="w-full h-screen bg-[url(/loginbg.jpg)] bg-cover bg-center flex justify-center items-center">
+        <div className="w-full h-screen bg-[url(/login.jpg)] bg-cover bg-center flex justify-center items-center">
             <div className="w-[500px] h-[500px] backdrop-blur-sm shadow-2xl rounded-[30px] relative gap-[20px] text-white flex flex-col items-center justify-center">
                 <h1 className="absolute top-[5px] text-2xl font-bold text-center my-5">Register</h1>
 
