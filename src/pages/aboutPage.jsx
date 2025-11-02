@@ -38,7 +38,7 @@ export default function AboutPage() {
             </p>
             <Link
               to="/products"
-              className="mt-6 inline-block bg-accent text-white px-6 py-3 rounded-full font-medium hover:bg-pink-700 transition"
+              className="mt-6 inline-block bg-accent text-white px-6 py-3 rounded-full font-medium hover:bg-black transition"
             >
               Explore Our Products
             </Link>
@@ -60,14 +60,14 @@ export default function AboutPage() {
             Our Promise to You
           </h2>
           <div className="grid md:grid-cols-2 gap-10">
-            <div className="bg-white p-8 rounded-xl shadow-sm">
+            <div className="bg-white p-8 rounded-xl shadow-sm hover:scale-105 transition">
               <FiHeart className="text-accent text-4xl mx-auto mb-4" />
               <h3 className="text-2xl font-semibold text-gray-800 mb-3">Our Mission</h3>
               <p className="text-gray-600">
                 To empower confidence through clean, ethical, and high-performance beauty products that respect your skin and the planet.
               </p>
             </div>
-            <div className="bg-white p-8 rounded-xl shadow-sm">
+            <div className="bg-white p-8 rounded-xl shadow-sm hover:scale-105 transition">
               <FiAward className="text-accent text-4xl mx-auto mb-4" />
               <h3 className="text-2xl font-semibold text-gray-800 mb-3">Our Vision</h3>
               <p className="text-gray-600">
@@ -127,9 +127,9 @@ export default function AboutPage() {
           </h2>
           <div className="grid md:grid-cols-3 gap-10">
             {[
-              { name: "Dr. Sarah Kim", role: "Chief Dermatologist", img: "/rev1.jpg" },
-              { name: "Emma Lopez", role: "CEO & Formulator", img: "/rev2.jpg" },
-              { name: "Mia Chen", role: "Head of Sustainability", img: "/rev3.jpg" },
+              { name: "Dr. Sarah Kim", role: "Chief Dermatologist", img: "/profile.png" },
+              { name: "Emma Lopez", role: "CEO & Formulator", img: "/profile.png" },
+              { name: "Mia Chen", role: "Head of Sustainability", img: "/profile.png" },
             ].map((member, i) => (
               <div key={i} className="group">
                 <img
@@ -157,7 +157,7 @@ export default function AboutPage() {
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
             <Link
               to="/products"
-              className="bg-white text-accent px-8 py-3 rounded-full font-medium hover:bg-gray-100 transition"
+              className="bg-white text-accent px-8 py-3 rounded-full font-medium hover:bg-gray-100 transition "
             >
               Shop Now
             </Link>
