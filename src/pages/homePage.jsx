@@ -30,7 +30,7 @@ export default function HomePage() {
                   </p>
                   <Link
                     to="/products"
-                    className="bg-accent text-white px-8 py-3 rounded-full font-medium hover:bg-black transition inline-block"
+                    className="bg-accent text-white px-8 py-3 mb-2 rounded-full font-medium hover:bg-gray-800 transition inline-block"
                   >
                     Shop Now
                   </Link>
@@ -57,7 +57,7 @@ export default function HomePage() {
                   </p>
                   <Link
                     to="/products"
-                    className="bg-accent text-white px-8 py-3 rounded-full font-medium hover:bg-black transition inline-block"
+                    className="bg-accent text-white px-8 py-3 mb-2 rounded-full font-medium hover:bg-gray-800 transition inline-block"
                   >
                     Explore New
                   </Link>
@@ -84,7 +84,7 @@ export default function HomePage() {
                   </p>
                   <Link
                     to="/products"
-                    className="bg-accent text-white px-8 py-3 rounded-full font-medium hover:bg-black transition inline-block"
+                    className="bg-accent text-white px-8 py-3 mb-2 rounded-full font-medium hover:bg-gray-800 transition inline-block"
                   >
                     Shop Sale
                   </Link>

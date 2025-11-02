@@ -4,6 +4,9 @@ import { GiHamburgerMenu } from "react-icons/gi";
 import { useState } from "react";
 import { HiHome } from "react-icons/hi";
 import { BiStore } from "react-icons/bi";
+import { IoCall } from "react-icons/io5";
+import { HiInformationCircle } from "react-icons/hi";
+import { MdRateReview } from "react-icons/md";
 
 
 
@@ -49,6 +52,30 @@ export default function Header(){
                             }}>
                                 <BiCart className="text-accent text-2xl mr-2"/>
                                 Cart
+                                </button>
+                                {/*reviews*/}
+                            <button className="text-accent text-2xl flex flex-row items-center" onClick={()=>{
+                                setIsOpen(false);
+                                navigate("/reviews");
+                            }}>
+                                <MdRateReview className="text-accent text-2xl mr-2"/>
+                                Reviews
+                                </button>
+                                {/*about-us*/}
+                            <button className="text-accent text-2xl flex flex-row items-center" onClick={()=>{
+                                setIsOpen(false);
+                                navigate("/about-us");
+                            }}>
+                                <HiInformationCircle className="text-accent text-2xl mr-2"/>
+                                About-us
+                                </button>
+                                {/*contact-us*/}
+                            <button className="text-accent text-2xl flex flex-row items-center" onClick={()=>{
+                                setIsOpen(false);
+                                navigate("/contact-us");
+                            }}>
+                                <IoCall className="text-accent text-2xl mr-2"/>
+                                Contact-us
                                 </button>
                         </div>
                     </div>

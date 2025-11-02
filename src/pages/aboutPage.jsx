@@ -38,7 +38,7 @@ export default function AboutPage() {
             </p>
             <Link
               to="/products"
-              className="mt-6 inline-block bg-accent text-white px-6 py-3 rounded-full font-medium hover:bg-black transition"
+              className="mt-6 inline-block bg-accent text-white px-6 py-3 rounded-full font-medium hover:bg-gray-800 transition"
             >
               Explore Our Products
             </Link>
@@ -148,7 +148,7 @@ export default function AboutPage() {
       {/* CTA */}
       <section className="py-16 bg-accent text-white text-center">
         <div className="max-w-4xl mx-auto px-6">
-          <h2 className="text-3xl md:text-4xl font-bold mb-6">
+          <h2 className="text-3xl md:text-4xl font-bold mb-6 ">
             Ready to Glow Naturally?
           </h2>
           <p className="text-lg mb-8">
