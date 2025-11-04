@@ -43,9 +43,8 @@ export default function ContactPage() {
     if (form.message.length < 10) return toast.error("Message too short");
 
     setLoading(true);
-    axios
-      .post(
-        import.meta.env.VITE_BACKEND_URL + "/api/users/contacts",
+    axios.post(
+  import.meta.env.VITE_BACKEND_URL + "/api/users/contacts",
         { name:user.name,
           email: user.email,
           subject: form.subject,
