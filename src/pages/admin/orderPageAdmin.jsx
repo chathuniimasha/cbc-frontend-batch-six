@@ -51,7 +51,7 @@ export default function OrdersPageAdmin(){
                     {
                         orders.map((order,index)=>{
                             return(
-                            <tr key={index} className="border-b-[1px] hover:bg-blue-600 hover:text-white" onClick={()=>{
+                            <tr key={index} className="border-b-[1px] hover:bg-accent hover:text-white" onClick={()=>{
                                 setOrderStatus(order.status);
                                 setOrderNotes(order.notes);
                                 setClickOrder(order);
@@ -76,7 +76,7 @@ export default function OrdersPageAdmin(){
   popupVisible && clickOrder &&(
     <div className="fixed top-0 left-0 w-full h-full bg-[#00000070] flex justify-center items-center z-50">
       <div className="w-[600px] max-h-[600px] bg-white rounded-2xl shadow-lg relative p-6">
-        {(orderStatus!=clickOrder.status || orderNotes!=clickOrder.notes)&&<button className="absolute top-2 right-2 bg-blue-500 text-white p-2 rounded-lg" onClick={async()=>{
+        {(orderStatus!=clickOrder.status || orderNotes!=clickOrder.notes)&&<button className="absolute top-2 right-2 bg-accent text-white p-2 rounded-lg" onClick={async()=>{
             setPopupVisible(false);
             try{
                 await axios.put(
