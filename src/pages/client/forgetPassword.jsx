@@ -35,7 +35,7 @@ export default function ForgetPasswordPage() {
         }
     }
 	return (
-		<div className="w-full h-full flex justify-center items-center text-secondary">
+		<div className="w-full h-full flex justify-center items-center text-gray-800">
 			{!emailSent&&<div className="bg-primary w-[500px] h-[500px] shadow-2xl flex flex-col items-center justify-center gap-[20px] rounded-[30px]">
 				<h1 className="text-2xl font-bold">Reset Password</h1>
 				<input
@@ -44,7 +44,7 @@ export default function ForgetPasswordPage() {
 					className="w-[350px] h-[40px] border border-white rounded-xl text-center"
 					onChange={(e) => setEmail(e.target.value)}
 				/>
-				<button onClick={sendOTP} className="w-[350px] h-[40px] bg-blue-500 rounded-xl text-white text-lg mt-5 hover:bg-blue-600 transition-all duration-300">
+				<button onClick={sendOTP} className="w-[350px] h-[40px] bg-accent rounded-xl text-white text-lg mt-5 hover:bg-gray-800 transition-all duration-300">
 					Send OTP
 				</button>
 			</div>}
@@ -69,7 +69,7 @@ export default function ForgetPasswordPage() {
                         className="w-[350px] h-[40px] border border-white rounded-xl text-center"
                         onChange={(e) => setConfirmPassword(e.target.value)}
                     />
-                    <button onClick={resetPassword} className="w-[350px] h-[40px] bg-blue-500 rounded-xl text-white text-lg mt-5 hover:bg-blue-600 transition-all duration-300">
+                    <button onClick={resetPassword} className="w-[350px] h-[40px] bg-accent rounded-xl text-white text-lg mt-5 hover:bg-gray-800 transition-all duration-300">
                         Reset Password
                     </button>
                 </div>

@@ -25,7 +25,7 @@ export default function ReviewsPage() {
   const fetchReviews = async () => {
     try {
       const { data } = await axios.get(
-        import.meta.env.VITE_BACKEND_URL + "/api/reviews/getReviews"
+        import.meta.env.VITE_BACKEND_URL + "/api/users/getReviews"
       );
       setReviews(data.reviews);
     } catch {
@@ -44,7 +44,7 @@ export default function ReviewsPage() {
     setLoading(true);
     try {
       await axios.post(
-        import.meta.env.VITE_BACKEND_URL + "/api/reviews/createReview",
+        import.meta.env.VITE_BACKEND_URL + "/api/users/createReview",
         form,
         { headers: { Authorization: `Bearer ${localStorage.getItem("token")}` } }
       );

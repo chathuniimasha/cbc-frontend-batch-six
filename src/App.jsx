@@ -28,7 +28,7 @@ function App() {
           <Route path='/test' element={<TestPage/>}/>
           <Route path='/register' element={<RegisterPage/>}/>
           <Route path='/admin/*'element={<AdminPage/>}/>
-          <Route path="/forget" element={<ForgetPasswordPage/>}/>
+          <Route path='/forget' element={<ForgetPasswordPage/>}/>
           <Route path='/*'element={<ClientWebPage/>}/>
           
 
